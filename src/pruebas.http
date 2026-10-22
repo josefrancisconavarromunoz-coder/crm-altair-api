@@ -1,0 +1,35 @@
+### 1. Crear una tutoría de prueba
+POST http://localhost:8080/api/tutorias
+Content-Type: application/json
+
+{
+  "titulo": "Matemáticas",
+  "descripcion": "Tutoría de matemáticas de nivel básico",
+  "profesor": "Profesor de prueba",
+  "precio": 20.0,
+  "disponible": true
+}
+
+### 2. Consultar todas las tutorías
+GET http://localhost:8080/api/tutorias
+
+### 3. Consultar una tutoría por ID
+GET http://localhost:8080/api/tutorias/1
+
+### 4. Actualizar una tutoría
+PUT http://localhost:8080/api/tutorias/1
+Content-Type: application/json
+
+{
+  "titulo": "Matemáticas nivel inicial",
+  "descripcion": "Tutoría de matemáticas de nivel básico",
+  "profesor": "Profesor de prueba",
+  "precio": 22.0,
+  "disponible": true
+}
+
+### 5. Eliminar una tutoría
+DELETE http://localhost:8080/api/tutorias/1
+
+### 6. Comprobar error 404 para una tutoría inexistente
+GET http://localhost:8080/api/tutorias/9999
